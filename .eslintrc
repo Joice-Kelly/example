@@ -1,0 +1,42 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "import"],
+  "rules": {
+    "no-console": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-else-return": "error",
+    "prefer-destructuring": "warn",
+    "complexity": ["error", 3],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "external",
+          "builtin",
+          "internal",
+          "sibling",
+          "parent",
+          "index",
+          "object"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "max-params": ["error", 4],
+    "max-lines-per-function": ["error", 21]
+  }
+}
